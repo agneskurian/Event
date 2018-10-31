@@ -70,6 +70,12 @@
                 <asp:FileUpload ID="FileUpload1" runat="server" Height="17px" Width="155px" />
             </td>
         </tr>
+        <tr>
+            <td>
+                <asp:Button ID="Button1" runat="server" Text="Button" />
+            </td>
+            <td>&nbsp;</td>
+        </tr>
     </table>
 
 
