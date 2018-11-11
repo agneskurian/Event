@@ -4,10 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Text;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 using System.Configuration;
+using System.Text;
+using System.IO;
+
 
 public partial class Admin_register : System.Web.UI.Page
 {
@@ -75,41 +77,72 @@ public partial class Admin_register : System.Web.UI.Page
         return id;
 
     }
-    protected void Button1_Click(object sender, EventArgs e)
-    {
-        if (lblcaptua.Text == txtcap.Text)
-        {
-            Response.Write("<script>alert('Successfully Registerd')</script>");
-        }
-        else
-        {
-            txtcap.Text = "";
-            generate_captua();
-        }
-        Class1 obj = new Class1();
-        obj.getconnect();
-        SqlCommand cmd = new SqlCommand("splogin", obj.con);
-        cmd.CommandType = CommandType.StoredProcedure;
-        cmd.Parameters.Add("@flag", 0);
-        cmd.Parameters.Add("@loginid", id_generated());
-        cmd.Parameters.Add("@username", txtuname.Text);
-        cmd.Parameters.Add("@passwd", txtpass.Text);
-        cmd.Parameters.Add("@usertype", "Guest");
-
-        SqlCommand cmd1 = new SqlCommand("spregister", obj.con);
-        cmd1.CommandType = CommandType.StoredProcedure;
-        cmd1.Parameters.Add("@flag", 0);
-        cmd1.Parameters.Add("@regid", id_generated());
-        cmd1.Parameters.Add("@username", txtuname.Text);
-        cmd1.Parameters.Add("@address", txtaddress.Text);
-        cmd1.Parameters.Add("@city", txtcity.Text);
-        cmd1.Parameters.Add("@email", txtemail.Text);
-        cmd1.Parameters.Add("@phone", txtphn.Text);
-        cmd1.Parameters.Add("@password", txtpass.Text);
-        cmd1.ExecuteNonQuery();
-        cmd.ExecuteNonQuery();
-        //clear();
-        Response.Write("<script>alert('Registered Successfully')</script>");
-    }
     
+
+    protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
+    {
+        if (Page.IsValid)
+        {
+
+            if (lblcaptua.Text == txtcap.Text)
+            {
+                Response.Write("<script>alert('Captua generated')</script>");
+            }
+            else
+            {
+                txtcap.Text = "";
+                generate_captua();
+            }
+            Class1 obj = new Class1();
+            obj.getconnect();
+            SqlCommand cmd = new SqlCommand("splogin", obj.con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@flag", 0);
+            cmd.Parameters.Add("@loginid", id_generated());
+            cmd.Parameters.Add("@username", txtuname.Text);
+            cmd.Parameters.Add("@passwd", txtpass.Text);
+            cmd.Parameters.Add("@usertype", "Guest");
+
+            SqlCommand cmd1 = new SqlCommand("spregister", obj.con);
+            cmd1.CommandType = CommandType.StoredProcedure;
+            cmd1.Parameters.Add("@flag", 0);
+            cmd1.Parameters.Add("@regid", id_generated());
+            cmd1.Parameters.Add("@username", txtuname.Text);
+            cmd1.Parameters.Add("@address", txtaddress.Text);
+            cmd1.Parameters.Add("@city", txtcity.Text);
+            cmd1.Parameters.Add("@email", txtemail.Text);
+            cmd1.Parameters.Add("@phone", txtphn.Text);
+            cmd1.Parameters.Add("@password", txtpass.Text);
+
+
+            SqlCommand cmd2 = new SqlCommand("splogin", obj.con);
+            cmd2.CommandType = CommandType.StoredProcedure;
+            cmd2.Parameters.Add("@flag", 4);
+            cmd2.Parameters.Add("@username", txtuname.Text);
+            DataTable dt = new DataTable();
+            SqlDataAdapter adt = new SqlDataAdapter(cmd2);
+            adt.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+
+                Response.Write("<script>alert('you are already registerd please login')</script>");
+
+
+            }
+
+            else
+            {
+
+                cmd1.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
+                //clear();
+                Response.Write("<script>alert('Registered Successfully')</script>");
+            }
+        }
+
+    }
+    protected void Reset_Click(object sender, EventArgs e)
+    {
+
+    }
 }
