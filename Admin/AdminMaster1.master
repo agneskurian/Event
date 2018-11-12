@@ -56,8 +56,8 @@
           <li class="menu-active"><a href="ahome.aspx">Home</a></li>
           <li><a href="addproducts.aspx">Add Product</a></li>
           <li><a href="viewproduct.aspx">View Product</a></li>
-          <li><a href="vieworders.aspx">View Orders</a></li>
-          <li><a href="logout.aspx">Logout</a></li>
+          <li><a href="admin_vieworder.aspx">View Orders</a></li>
+          <li><a href="../Logout.aspx">Logout</a></li>
 
         </ul>
       </nav><!-- #nav-menu-container -->

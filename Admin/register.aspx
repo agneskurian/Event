@@ -43,7 +43,6 @@
                 <td class="auto-style11">
                     <asp:TextBox ID="txtuname" runat="server" CausesValidation="True"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtuname" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage="RegularExpressionValidator" ControlToValidate="txtuname"></asp:RegularExpressionValidator>
                 </td>
             </tr>
             <tr>
@@ -107,8 +106,9 @@
             <tr>
                 <td class="auto-style4" colspan="2">&nbsp;&nbsp;&nbsp;
                     <%--<asp:Button ID="Button2" runat="server" Text="Submit" OnClick="Button2_Click" />--%>
- <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/Admin/img/login.jpg" OnClick="ImageButton2_Click" Width="100px" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Reset" runat="server" Text="Reset" />
+ <%--<asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/Admin/img/login.jpg" OnClick="ImageButton2_Click" Width="100px" />--%>
+&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Submit" />
+<%--                    &nbsp;&nbsp;&nbsp;<asp:Button ID="Reset" runat="server" Text="Reset" OnClick="Reset_Click1" />--%>
                     &nbsp; </td>
             </tr>
         </table>

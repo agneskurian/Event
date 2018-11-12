@@ -39,7 +39,10 @@ public partial class Admin_addproducts : System.Web.UI.Page
    
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (Session["username"].ToString() == "")
+        {
+            Response.Redirect("~/Admin/home.aspx");
+        }
     }
     protected void Button2_Click(object sender, EventArgs e)
     {

@@ -60,8 +60,8 @@
          <li><a href="ViewMala.aspx">Flower Mala</a></li>
           <li><a href="viewbouquet.aspx">Bouquet</a></li>
               <li><a href="viewwreath.aspx">Wreath</a></li> 
-               <li><a href="#contact">Contact</a></li>
-              <li><a href="Logout.aspx">LogOut</a></li>
+              <li><a href="Myorder.aspx">Status</a></li> 
+              <li><a href="../Logout.aspx">LogOut</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>

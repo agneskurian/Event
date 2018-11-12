@@ -6,6 +6,9 @@
 <head runat="server">
         <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
+       <%-- <script type="text/javascript">
+            window.history.forward(1);
+    </script>--%>
 
  <title>Flower Quest</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -56,9 +59,10 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="">Home</a></li>
+          <li class="menu-active">
+          <a href="home.aspx">Home</li></li>
           <li><a href="#about">About Us</a></li>
-          <li><a href="#Login">Login</a></li>
+          <li><a href="loginUser.aspx">Login</a></li>
           <li><a href="#portfolio">Gallery</a></li>
           <li><a href="#team">Team</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -264,6 +268,8 @@ You Can't Put Into Words..!
         </asp:ContentPlaceHolder>
   </div>
           </form>
+          </section>
+
     <!--==========================
       Portfolio Section
     ============================-->
@@ -682,8 +688,8 @@ You Can't Put Into Words..!
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-info">
-            <h3>BizPage</h3>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+            <h3>FLOWER QUEST</h3>
+            <p>Flower Quest or FQuest site provides flower products mainly bouquet,flowermala and wreath.User can select one product and buy at that time if they wish.It provides a lot of advantages to users by providing different products.</p>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
@@ -691,7 +697,7 @@ You Can't Put Into Words..!
             <ul>
               <li><i class="ion-ios-arrow-right"></i> <a href="#">Home</a></li>
               <li><i class="ion-ios-arrow-right"></i> <a href="#">About us</a></li>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">Services</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#">Login</a></li>
               <li><i class="ion-ios-arrow-right"></i> <a href="#">Terms of service</a></li>
               <li><i class="ion-ios-arrow-right"></i> <a href="#">Privacy policy</a></li>
             </ul>
@@ -700,11 +706,11 @@ You Can't Put Into Words..!
           <div class="col-lg-3 col-md-6 footer-contact">
             <h4>Contact Us</h4>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              Lucknow <br>
+              New Delhi, ND 535022<br>
+              INDIA <br>
+              <strong>Phone:</strong> +91 889 55488 55<br>
+              <strong>Email:</strong> fquest@gmail.com<br>
             </p>
 
             <div class="social-links">
@@ -719,7 +725,7 @@ You Can't Put Into Words..!
 
           <div class="col-lg-3 col-md-6 footer-newsletter">
             <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
+            <p>Our FQuest provides a lot of features to our clients </p>
             <form action="" method="post">
               <input type="email" name="email"><input type="submit"  value="Subscribe">
             </form>

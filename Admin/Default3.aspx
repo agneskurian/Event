@@ -1,6 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminMaster.master" AutoEventWireup="true" CodeFile="Default3.aspx.cs" Inherits="Admin_Default3" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <script type="text/javascript">
+        window.history.forward(1);
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
       <div style="background-image: url('http://localhost:55705/Admin/img/intro-carousel/introd3.jpg');height:655px; color: #0000FF;">
@@ -48,7 +51,7 @@
 
                                                 <td>&nbsp;</td>
                  
-
+          
 
 
             </tr>

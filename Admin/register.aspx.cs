@@ -4,11 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Text;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
-using System.Text;
-using System.IO;
+
 
 
 public partial class Admin_register : System.Web.UI.Page
@@ -51,7 +51,7 @@ public partial class Admin_register : System.Web.UI.Page
         builder.Append(RandomString(2, false));
         lblcaptua.Text = builder.ToString();
     }
-   
+
 
     protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
     {
@@ -77,22 +77,13 @@ public partial class Admin_register : System.Web.UI.Page
         return id;
 
     }
-    
 
-    protected void ImageButton2_Click(object sender, ImageClickEventArgs e)
+
+   protected void Button1_Click(object sender, EventArgs e)
     {
-        if (Page.IsValid)
+     if (Page.IsValid)
         {
 
-            if (lblcaptua.Text == txtcap.Text)
-            {
-                Response.Write("<script>alert('Captua generated')</script>");
-            }
-            else
-            {
-                txtcap.Text = "";
-                generate_captua();
-            }
             Class1 obj = new Class1();
             obj.getconnect();
             SqlCommand cmd = new SqlCommand("splogin", obj.con);
@@ -135,14 +126,33 @@ public partial class Admin_register : System.Web.UI.Page
 
                 cmd1.ExecuteNonQuery();
                 cmd.ExecuteNonQuery();
-                //clear();
                 Response.Write("<script>alert('Registered Successfully')</script>");
             }
+            clear();
+
         }
-
     }
-    protected void Reset_Click(object sender, EventArgs e)
+    protected void clear()
     {
+        txtuname.Text = "";
+        txtaddress.Text = "";
+        txtcity.Text = "";
+        txtemail.Text = "";
+        txtcity.Text = "";
+        txtphn.Text = "";
+        txtpass.Text = "";
+        txtcpass.Text = "";
+
 
     }
+   
+    
 }
+    
+       
+  
+    
+//protected void Button1_Click(object sender, EventArgs e)
+//{
+
+//}

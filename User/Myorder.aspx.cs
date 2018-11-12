@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Admin_viewproduct : System.Web.UI.Page
+public partial class User_Myorder : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -13,5 +13,9 @@ public partial class Admin_viewproduct : System.Web.UI.Page
         {
             Response.Redirect("~/Admin/home.aspx");
         }
+    }
+    protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        Response.Redirect("Msg.aspx");
     }
 }
