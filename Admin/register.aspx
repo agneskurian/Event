@@ -43,6 +43,7 @@
                 <td class="auto-style11">
                     <asp:TextBox ID="txtuname" runat="server" CausesValidation="True"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtuname" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage="Enter valid usename" ForeColor="Red" ControlToValidate="txtuname" ValidationExpression="^[a-zA-Z\s]+$"></asp:RegularExpressionValidator>
                 </td>
             </tr>
             <tr>
@@ -99,17 +100,19 @@
                     <asp:Label ID="lblcaptua" runat="server" Text="lblcaptua" Font-Size="Large" ForeColor="Red" Font-Bold="True" Font-Italic="True"></asp:Label>
                     <br />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <asp:TextBox ID="txtcap" runat="server" Height="16px"></asp:TextBox>
+                    <asp:TextBox ID="txtcap" runat="server" Height="16px" onCopy="return false" onDrag="return false" onDrop="return false" onPaste="return false" autocomplete="off" ></asp:TextBox>
                     <asp:ImageButton ID="ImageButton1" runat="server" Height="30" ImageUrl="img/intro-carousel/refresh2.jpg" OnClick="ImageButton1_Click" ValidateRequestMode="Disabled" />
                 </td>
             </tr>
             <tr>
                 <td class="auto-style4" colspan="2">&nbsp;&nbsp;&nbsp;
-                    <%--<asp:Button ID="Button2" runat="server" Text="Submit" OnClick="Button2_Click" />--%>
- <%--<asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/Admin/img/login.jpg" OnClick="ImageButton2_Click" Width="100px" />--%>
+                  
 &nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Submit" />
-<%--                    &nbsp;&nbsp;&nbsp;<asp:Button ID="Reset" runat="server" Text="Reset" OnClick="Reset_Click1" />--%>
-                    &nbsp; </td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="Button2" runat="server" Text="Cancel" OnClick="Button2_Click" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:HyperLink ID="HyperLink1" runat="server"><a href="loginUser.aspx">Login</a></asp:HyperLink>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
             </tr>
         </table>
 

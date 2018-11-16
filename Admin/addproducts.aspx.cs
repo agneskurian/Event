@@ -13,29 +13,29 @@ using System.Configuration;
 
 public partial class Admin_addproducts : System.Web.UI.Page
 {
-     protected  bool Check_Size()
-    {
-        System.Drawing.Image img=System.Drawing.Image.FromStream(FileUpload1.PostedFile.InputStream);
-        decimal size=Math.Round(((decimal)FileUpload1.PostedFile.ContentLength/(decimal)1024),2);
-        if(size>100)
-        {
-            return false;
-        }
-        else
-            return true;       
-    }
-     protected bool Check_dimension()
-     {
-         System.Drawing.Image img = System.Drawing.Image.FromStream(FileUpload1.PostedFile.InputStream);
-         int height = img.Height;
-         int width = img.Width;
-         if (height > 100 || width > 100)
-         {
-             return false;
-         }
-         else
-             return true;
-     }
+    // protected  bool Check_Size()
+    //{
+    //    System.Drawing.Image img=System.Drawing.Image.FromStream(FileUpload1.PostedFile.InputStream);
+    //    decimal size=Math.Round(((decimal)FileUpload1.PostedFile.ContentLength/(decimal)1024),2);
+    //    if(size>100)
+    //    {
+    //        return false;
+    //    }
+    //    else
+    //        return true;       
+    //}
+    // protected bool Check_dimension()
+    // {
+    //     System.Drawing.Image img = System.Drawing.Image.FromStream(FileUpload1.PostedFile.InputStream);
+    //     int height = img.Height;
+    //     int width = img.Width;
+    //     if (height > 100 || width > 100)
+    //     {
+    //         return false;
+    //     }
+    //     else
+    //         return true;
+    // }
    
     protected void Page_Load(object sender, EventArgs e)
     {

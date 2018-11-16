@@ -22,7 +22,7 @@ public partial class Admin_forgotpassword : System.Web.UI.Page
         cmd.CommandType = CommandType.StoredProcedure;
         cmd.Parameters.Add("@flag", 2);
         cmd.Parameters.Add("@username", txtuname.Text);
-        cmd.Parameters.Add("@phone", txtemail.Text);
+        cmd.Parameters.Add("@phone", txtphn.Text);
         DataTable dt = new DataTable();
         SqlDataAdapter adt = new SqlDataAdapter(cmd);
         adt.Fill(dt);

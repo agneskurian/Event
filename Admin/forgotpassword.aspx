@@ -10,33 +10,63 @@
             width: 100%;
         }
         .auto-style2 {
-            text-align: justify;
+            text-align: center;
+            height: 3px;
+            font-size: x-large;
+        }
+        .auto-style3 {
+            height: 277px;
+            text-align: center;
+        }
+        .auto-style5 {
+            text-align: center;
+            font-size: large;
         }
     </style>
 </head>
 <body style="text-align: left">
     <form id="form1" runat="server">
-    <div>
+       
+         <div  style="background-image: url('img/intro-carousel/beauty.jpg')">
 
         <table class="auto-style1">
             <tr>
-                <td class="auto-style2" colspan="2">Change Your Password</td>
+                <td class="auto-style2" colspan="2"><strong>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    Change Your Password<br />
+                    <br />
+                    <br />
+                    </strong></td>
             </tr>
             <tr>
-                <td>UserName</td>
+                <td class="auto-style5"><strong>UserName</strong></td>
                 <td>
-                    <asp:TextBox ID="txtuname" runat="server"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:TextBox ID="txtuname" runat="server" Height="34px" Width="160px"></asp:TextBox>
+                    <br />
+                    <br />
+                    <br />
                 </td>
             </tr>
             <tr>
-                <td>Email</td>
+                <td class="auto-style5"><strong>Phone</strong></td>
                 <td>
-                    <asp:TextBox ID="txtemail" runat="server"></asp:TextBox>
+                    <br />
+                    <br />
+                    <asp:TextBox ID="txtphn" runat="server" Height="34px" Width="160px"></asp:TextBox>
+                    <br />
+                    <br />
+                    <br />
                 </td>
             </tr>
             <tr>
-                <td colspan="2">
-                    <asp:Button ID="Button1" runat="server" Text="Reset" OnClick="Button1_Click" />
+                <td colspan="2" class="auto-style3">
+                    <asp:Button ID="Button1" runat="server" Text="Reset" OnClick="Button1_Click" Font-Bold="True" Height="35px" Width="92px" />
                 </td>
             </tr>
         </table>

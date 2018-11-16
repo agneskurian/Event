@@ -34,11 +34,16 @@ public partial class Admin_loginUser : System.Web.UI.Page
             {
                 Response.Redirect("~/Admin/ahome.aspx");
             }
-            else
+            else if(dt.Rows[0][3].ToString() == "employee")
             {
-                Response.Redirect("~/User/userhome.aspx");
+                Response.Redirect("~/Employee/employeehome.aspx");
 
             }
+            else{
+                           
+                Response.Redirect("~/User/userhome.aspx");
+
+        }
         }
 
     }

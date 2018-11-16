@@ -12,27 +12,38 @@
         .auto-style2 {
             height: 23px;
         }
+        .auto-style3 {
+            height: 26px;
+        }
     </style>
 </head>
-<body>
+<body style="text-align: center">
     <form id="form1" runat="server">
     <div>
     
         <table class="auto-style1">
             <tr>
-                <td>Enter new password</td>
                 <td>
-                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    <br />
+                    Enter new password<br />
+                </td>
+                <td>
+                    <asp:TextBox ID="TextBox1" runat="server" TextMode="Password"></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td>Confirm Password</td>
-                <td>
-                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                <td class="auto-style3">
+                    <br />
+                    Confirm Password<br />
+                </td>
+                <td class="auto-style3">
+                    <asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style2" colspan="2">
+                    <br />
+                    <br />
                     <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
                 </td>
             </tr>

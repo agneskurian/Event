@@ -38,6 +38,11 @@
     
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            font-size: x-large;
+        }
+    </style>
 </head>
 <body>
     <!--==========================
@@ -60,7 +65,7 @@
          <li><a href="ViewMala.aspx">Flower Mala</a></li>
           <li><a href="viewbouquet.aspx">Bouquet</a></li>
               <li><a href="viewwreath.aspx">Wreath</a></li> 
-              <li><a href="Myorder.aspx">Status</a></li> 
+              <li><a href="Mycart.aspx">Status</a></li> 
               <li><a href="../Logout.aspx">LogOut</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
@@ -83,9 +88,9 @@
             <div class="carousel-container">
               <div class="carousel-content">
                 
-                  <h4>WELCOME </h4>
-                <p>FQuest provides mainly three categories of flowers like bouquet,mala,wreath.Here use can select corresponding categories as they wish and add to their own cart.
-                    User can select only one product at a time according to the availability provided by FQuest.</p>
+                  <h4 class="auto-style1" style="color: #FFFFFF"><strong>WELCOME </strong> </h4>
+                <p>FQuest provides mainly three categories of flowers like bouquet,mala,wreath.Here use can select corresponding categories as they wish and purchase it.
+                    User can select only one product at a time and cannot purchase more than one quantity</p>
                <div>
         <asp:ContentPlaceHolder id="ContentPlaceHolder4" runat="server">
         

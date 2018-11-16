@@ -126,7 +126,7 @@ public partial class Admin_register : System.Web.UI.Page
 
                 cmd1.ExecuteNonQuery();
                 cmd.ExecuteNonQuery();
-                Response.Write("<script>alert('Registered Successfully')</script>");
+                Response.Redirect("loginUser.aspx");
             }
             clear();
 
@@ -145,8 +145,13 @@ public partial class Admin_register : System.Web.UI.Page
 
 
     }
+
+
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("home.aspx");
+    }
    
-    
 }
     
        

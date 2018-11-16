@@ -9,7 +9,7 @@
     <form id="form1" runat="server">
 <%--        <table style="width:100%">--%>
 <%--            <tr><td colspan="2">--%>
-        `<asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1">
+        `<asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" ForeColor="White">
             <ItemTemplate>
                 Productname:
                 <asp:Label ID="ProductnameLabel" runat="server" Text='<%# Eval("Productname") %>' />

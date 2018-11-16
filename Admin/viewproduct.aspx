@@ -12,6 +12,9 @@
             <asp:BoundField DataField="Cost" HeaderText="Cost" SortExpression="Cost" />
             <asp:BoundField DataField="Image" HeaderText="Image" SortExpression="Image" />
         </Columns>
+        <EmptyDataTemplate>
+            <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("Image") %>' Width="120px" />
+        </EmptyDataTemplate>
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:EventConnectionString %>" DeleteCommand="DELETE FROM [Add_product] WHERE [Productid] = @Productid" InsertCommand="INSERT INTO [Add_product] ([Productname], [Description], [Availability], [Cost], [Image]) VALUES (@Productname, @Description, @Availability, @Cost, @Image)" SelectCommand="SELECT * FROM [Add_product]" UpdateCommand="UPDATE [Add_product] SET [Productname] = @Productname, [Description] = @Description, [Availability] = @Availability, [Cost] = @Cost, [Image] = @Image WHERE [Productid] = @Productid">
         <DeleteParameters>
